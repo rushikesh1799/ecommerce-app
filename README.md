@@ -1,3 +1,3 @@
-## E-Commerce Backend
+## E-Commerce
 
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+Fashion Fusion is an e-commerce app that stores various fashion clothes that can be showcased and sold online. It has features like a Product listing page, cart management, wishlist management, Address management, and primary features that are required in an e-commerce app.

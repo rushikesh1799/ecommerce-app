@@ -1,43 +1,68 @@
+import { Routes, Route, NavLink } from "react-router-dom";
+
 import "./App.css";
-import logo from "./logo.png";
+import Mockman from "mockman-js";
+import Home from "./Pages/Home";
+import Cart from "./Pages/Cart/Cart";
+import Products from "./Pages/Products/Products";
+import Wishlist from "./Pages/Wishlist/Wishlist";
+import Login from "./Pages/Login/Login";
+import RequiresAuth from "./Components/RequiresAuth/RequiresAuth";
+import Signup from "./Pages/SignUp/Signup";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import UserProfile from "./Pages/UserProfile/UserProfile";
+import Checkout from "./Pages/Checkout/Checkout";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import OrderSummary from "./Pages/OrderSummary/OrderSummary";
+import RequiresCart from "./Components/RequiresCart/RequiresCart";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/mockman" element={<Mockman />}></Route>
+                <Route
+                    path="/cart"
+                    element={
+                        <RequiresAuth>
+                            <Cart />
+                        </RequiresAuth>
+                    }
+                ></Route>
+
+                <Route path="/products" element={<Products />}></Route>
+                <Route
+                    path="/products/:productID"
+                    element={<ProductDetails />}
+                ></Route>
+                <Route
+                    path="/wishlist"
+                    element={
+                        <RequiresAuth>
+                            <Wishlist />
+                        </RequiresAuth>
+                    }
+                ></Route>
+                <Route path="/login" element={<Login />}></Route>
+                <Route path="/signup" element={<Signup />}></Route>
+                <Route path="/user-profile" element={<UserProfile />}></Route>
+
+                <Route
+                    path="/checkout"
+                    element={
+                        <RequiresCart>
+                            <Checkout />
+                        </RequiresCart>
+                    }
+                ></Route>
+
+                <Route path="/order-summary" element={<OrderSummary />}></Route>
+            </Routes>
+            <ToastContainer />
         </div>
-      </header>
-    </div>
-  );
+    );
 }
 
 export default App;

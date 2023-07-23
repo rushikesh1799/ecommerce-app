@@ -6,22 +6,29 @@ import { v4 as uuid } from "uuid";
  * */
 
 export const categories = [
-  {
-    _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
-  },
-  {
-    _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
-  },
-  {
-    _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
-  },
+    {
+        _id: uuid(),
+        categoryName: "Men Collection",
+        categoryImg:
+            "https://img.freepik.com/premium-photo/bearded-man-with-shopping-bags-with-happy-feeling-isolated_1258-5542.jpg",
+        routeName: "Men",
+        desc: "Check out our best Men collection",
+    },
+    {
+        _id: uuid(),
+        categoryName: "Women Collection",
+        categoryImg:
+            "https://img.freepik.com/premium-photo/beautiful-asian-woman-carrying-colorful-bags-shopping-online-with-mobile-phone_8087-3877.jpg",
+        routeName: "Women",
+        desc: "Check out our best Women collection",
+    },
+    {
+        _id: uuid(),
+        categoryName: "Electronics",
+        categoryImg:
+            "https://img.freepik.com/free-photo/happy-kid-is-shopping-outdoors_624325-553.jpg?w=2000",
+        routeName: "Electronics",
+        desc: "Check out our best Electronics collection",
+    },
 ];
+// https://imgmedia.lbb.in/media/2020/10/5f9bc0a57372a75dc5da61fb_1604042917760.jpg

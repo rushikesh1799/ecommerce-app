@@ -7,13 +7,25 @@ import { formatDate } from "../utils/authUtils";
  * */
 
 export const users = [
-  {
-    _id: uuid(),
-    firstName: "Adarsh",
-    lastName: "Balika",
-    email: "adarshbalika@gmail.com",
-    password: "adarshbalika",
-    createdAt: formatDate(),
-    updatedAt: formatDate(),
-  },
+    {
+        _id: uuid(),
+        firstName: "Adarsh",
+        lastName: "Balika",
+        email: "adarshbalika@gmail.com",
+        password: "adarshbalika",
+        createdAt: formatDate(),
+        updatedAt: formatDate(),
+    },
+    {
+        _id: uuid(),
+        firstName: "Rushikesh",
+        lastName: "Bunge",
+        email: "rushikeshbunge321@gmail.com",
+        password: "rushi123",
+        createdAt: formatDate(),
+        updatedAt: formatDate(),
+    },
 ];
+
+// console.log(users);
+// lottiefiles-react

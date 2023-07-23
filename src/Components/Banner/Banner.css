@@ -1,0 +1,15 @@
+.banner-container {
+    /* height: 95vh; */
+    /* text-align: initial; */
+    /* background-color: antiquewhite; */
+    padding: 0;
+    margin: 0;
+}
+
+.banner_hero_img {
+    /* width: 90%; */
+    width: 100%;
+    height: 80vh;
+    display: block;
+    object-fit: cover;
+}

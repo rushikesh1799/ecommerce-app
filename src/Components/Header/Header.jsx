@@ -5,6 +5,7 @@ import { DataContext } from "../../context/DataProvider";
 import { AuthContext } from "../../context/AuthContext";
 
 import PageviewIcon from "@mui/icons-material/Pageview";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Header = () => {
     const token = localStorage.getItem("token");
@@ -37,19 +38,31 @@ const Header = () => {
 
             {/* <form action=""> */}
             <div className="searchbar_container">
-                <input
-                    type="text"
-                    className="search__input"
-                    placeholder="search"
-                    value={filters.search}
-                    onChange={(e) => {
-                        dispatch({
-                            type: "handleSearchInput",
-                            payload: e.target.value,
-                        });
-                    }}
-                    onClick={() => setFlag((prev) => !prev)}
-                />
+                <div className="searchbar_input">
+                    <input
+                        type="text"
+                        className="search__input"
+                        placeholder="Search..."
+                        value={filters.search}
+                        onChange={(e) => {
+                            dispatch({
+                                type: "handleSearchInput",
+                                payload: e.target.value,
+                            });
+                        }}
+                        onClick={() => setFlag((prev) => !prev)}
+                    />
+                    <SearchIcon
+                        sx={{
+                            padding: "8px",
+                            bgcolor: "#F0F4F8",
+                            height: "100%",
+                            borderTopRightRadius: "5px",
+                            borderBottomRightRadius: "5px",
+                        }}
+                    />
+                </div>
+
                 <section
                     className="searched_products_container"
                     onClick={() => setFlag((prev) => !prev)}

@@ -24,7 +24,15 @@
 
 .search__input {
     width: 100%;
-    padding: 0.75rem 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border: none;
+    outline: none;
+    background-color: #F0F4F8;
+    font-size: 1.1rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .nav-links {
@@ -51,6 +59,12 @@
 .searchbar_container {
     position: relative;
     width: 40%;
+}
+
+.searchbar_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .searched_products_container {

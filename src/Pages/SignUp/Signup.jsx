@@ -11,7 +11,7 @@ import { ReactToastify } from "../../Utility/ReactTostify";
 const Signup = () => {
     const navigate = useNavigate();
 
-    const { setToken, setUser } = useContext(AuthContext);
+    const { user, setToken, setUser } = useContext(AuthContext);
 
     const [signUpInfo, setSignUpInfo] = useState({
         firstName: "",
@@ -26,12 +26,9 @@ const Signup = () => {
     }, [signUpInfo]);
 
     const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-    // const [firstName, setFirstName] = useState("");
-    // const [lastName, setLastName] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [password, setPassword] = useState("");
-    // const [confirmPassword, setConfirmPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     const handleSignUp = async (e) => {
         e.preventDefault();
@@ -50,6 +47,10 @@ const Signup = () => {
 
                     setToken(encodedToken);
                     setUser(user);
+                    ReactToastify(
+                        `Signed up Successfully, Welcome ${user?.firstName}`,
+                        "success"
+                    );
                 }, 500);
 
                 navigate("/products");
@@ -76,6 +77,7 @@ const Signup = () => {
                                 <input
                                     type="text"
                                     value={signUpInfo.firstName}
+                                    placeholder="Enter your First Name..."
                                     onChange={(e) =>
                                         setSignUpInfo((prev) => ({
                                             ...prev,
@@ -91,6 +93,7 @@ const Signup = () => {
                                 <input
                                     type="text"
                                     value={signUpInfo.lastName}
+                                    placeholder="Enter your Last Name..."
                                     onChange={(e) =>
                                         setSignUpInfo((prev) => ({
                                             ...prev,
@@ -106,6 +109,7 @@ const Signup = () => {
                                 <input
                                     type="email"
                                     value={signUpInfo.email}
+                                    placeholder="Enter your Email..."
                                     onChange={(e) =>
                                         setSignUpInfo((prev) => ({
                                             ...prev,
@@ -116,11 +120,12 @@ const Signup = () => {
                             </label>
                         </div>
                         <div className="signUp__form__field">
-                            <label>
-                                Password:
+                            <label>Password:</label>
+                            <div className="password__field">
                                 <input
-                                    type="password"
+                                    type={!showPassword ? "password" : "text"}
                                     value={signUpInfo.password}
+                                    placeholder="Enter your Password..."
                                     onChange={(e) =>
                                         setSignUpInfo((prev) => ({
                                             ...prev,
@@ -128,15 +133,37 @@ const Signup = () => {
                                         }))
                                     }
                                 />
-                            </label>
+                                {!showPassword ? (
+                                    <i
+                                        className="fa fa-eye-slash password__icon"
+                                        aria-hidden="true"
+                                        onClick={() =>
+                                            setShowPassword((prev) => !prev)
+                                        }
+                                    ></i>
+                                ) : (
+                                    <i
+                                        className="fa fa-eye password__icon"
+                                        aria-hidden="true"
+                                        onClick={() =>
+                                            setShowPassword((prev) => !prev)
+                                        }
+                                    ></i>
+                                )}
+                            </div>
                         </div>
 
                         <div className="signUp__form__field">
-                            <label>
-                                Confirm Password:
+                            <label>Confirm Password:</label>
+                            <div className="password__field">
                                 <input
-                                    type="password"
+                                    type={
+                                        !showConfirmPassword
+                                            ? "password"
+                                            : "text"
+                                    }
                                     value={signUpInfo.confirmPassword}
+                                    placeholder="Enter your Confirm Password..."
                                     onChange={(e) =>
                                         setSignUpInfo((prev) => ({
                                             ...prev,
@@ -144,14 +171,37 @@ const Signup = () => {
                                         }))
                                     }
                                 />
-                            </label>
+                                {!showConfirmPassword ? (
+                                    <i
+                                        className="fa fa-eye-slash password__icon"
+                                        aria-hidden="true"
+                                        onClick={() =>
+                                            setShowConfirmPassword(
+                                                (prev) => !prev
+                                            )
+                                        }
+                                    ></i>
+                                ) : (
+                                    <i
+                                        className="fa fa-eye password__icon"
+                                        aria-hidden="true"
+                                        onClick={() =>
+                                            setShowConfirmPassword(
+                                                (prev) => !prev
+                                            )
+                                        }
+                                    ></i>
+                                )}
+                            </div>
                         </div>
 
                         <br />
                         <button type="submit">Sign Up</button>
                         <span>
-                            Already have an account?{" "}
-                            <NavLink to="/login">Log In</NavLink>
+                            <b>Already have an account? </b>
+                            <NavLink className="login_link" to="/login">
+                                Log In
+                            </NavLink>
                         </span>
                     </form>
                 </div>

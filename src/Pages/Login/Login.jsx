@@ -6,12 +6,14 @@ import "./Login.css";
 import Header from "../../Components/Header/Header";
 import { AuthContext } from "../../context/AuthContext";
 import { DataContext } from "../../context/DataProvider";
+import { ReactToastify } from "../../Utility/ReactTostify";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
 
-    const { setToken, setUser } = useContext(AuthContext);
+    const { user, setToken, setUser } = useContext(AuthContext);
     const { loginAsGuest } = useContext(DataContext);
 
     const navigate = useNavigate();
@@ -35,6 +37,10 @@ const Login = () => {
                 );
                 setToken(response.data.encodedToken);
                 setUser(response.data.user);
+                ReactToastify(
+                    `Logged in Successfully, Welcome ${user?.firstName}`,
+                    "success"
+                );
             }
 
             // console.log(response.data);
@@ -53,43 +59,69 @@ const Login = () => {
     };
 
     return (
-        <div className="login__page__container">
-            <div className="form-container">
-                <h1>Login</h1>
-                <form onSubmit={handleLogin} className="login__form">
-                    <div className="input__fields">
-                        <label className="login__form__labels">
-                            Email Address:
-                        </label>
-                        <input
-                            type="email"
-                            value={email}
-                            placeholder="Enter your email address..."
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </div>
+        <div>
+            <Header />
+            <div className="login__page__container">
+                <div className="form-container">
+                    <h1>Login</h1>
+                    <form onSubmit={handleLogin} className="login__form">
+                        <div className="input__fields">
+                            <label className="login__form__labels">
+                                Email Address:
+                            </label>
+                            <input
+                                type="email"
+                                value={email}
+                                placeholder="Enter your email address..."
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
 
-                    <br />
-                    <div className="input__fields">
-                        <label className="login__form__labels">Password:</label>
-                        <input
-                            type="password"
-                            value={password}
-                            placeholder="Enter your email password..."
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
+                        <br />
+                        <div className="input__fields">
+                            <label>Password:</label>
+                            <div className="password__field">
+                                <input
+                                    type={!showPassword ? "password" : "text"}
+                                    value={password}
+                                    placeholder="Enter your email password..."
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
+                                />
+                                {!showPassword ? (
+                                    <i
+                                        className="fa fa-eye-slash password__icon"
+                                        aria-hidden="true"
+                                        onClick={() =>
+                                            setShowPassword((prev) => !prev)
+                                        }
+                                    ></i>
+                                ) : (
+                                    <i
+                                        className="fa fa-eye password__icon"
+                                        aria-hidden="true"
+                                        onClick={() =>
+                                            setShowPassword((prev) => !prev)
+                                        }
+                                    ></i>
+                                )}
+                            </div>
+                        </div>
 
-                    <br />
-                    <button type="submit">Login</button>
-                    <button type="submit" onClick={loginAsGuest}>
-                        Login with Guest Credentials
-                    </button>
-                    <span>
-                        Don't have an account?{" "}
-                        <NavLink to="/signup">Join Now</NavLink>
-                    </span>
-                </form>
+                        <br />
+                        <button type="submit">Login</button>
+                        <button type="submit" onClick={loginAsGuest}>
+                            Login with Guest Credentials
+                        </button>
+                        <span>
+                            <b>Don't have an account? </b>
+                            <NavLink className="signup_link" to="/signup">
+                                Join Now
+                            </NavLink>
+                        </span>
+                    </form>
+                </div>
             </div>
         </div>
     );

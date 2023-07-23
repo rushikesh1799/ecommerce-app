@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .signup-form-container {
@@ -47,3 +47,21 @@
     cursor: pointer;
 }
 
+
+.password__icon {
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.password__field {
+    position: relative;
+    width: 100%;
+}
+
+.login_link {
+    color: blue;
+    text-decoration: underline;
+}

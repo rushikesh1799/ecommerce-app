@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .form-container {
@@ -11,7 +11,7 @@
     align-items: center;
     width: 40%;
 
-    padding: 3rem;
+    padding: 0rem 1rem;
     background-color: #f4f4f4;
     border-radius: 5px;
     position: absolute;
@@ -24,10 +24,11 @@
     max-width: 400px;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
+    padding: 3rem 0rem;
 }
 
 button[type="submit"] {
+    width: 100%;
     padding: 10px 20px;
     background-color: #4caf50;
     color: #fff;
@@ -47,12 +48,9 @@ button[type="submit"]:hover {
     flex-direction: column;
     gap: 0.5rem;
     text-align: start;
-
-
-
 }
 
-input {
+.login__page__container input {
     background: #fff;
     border: 1px solid #d0d0d0;
     border-radius: 5px;
@@ -60,4 +58,30 @@ input {
     font-style: normal;
     font-weight: 400;
     padding: 5px 8px;
+    width: 95%;
+}
+
+.signup_link {
+    color: blue;
+    text-decoration: underline;
+}
+
+.password__field {
+    position: relative;
+    width: 100%;
+}
+
+.password__icon {
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    right: 8px;
+    top: 6px;
+}
+
+.login__form label {
+    display: block;
+    text-align: start;
+    margin-bottom: 10px;
+    font-weight: bold;
 }

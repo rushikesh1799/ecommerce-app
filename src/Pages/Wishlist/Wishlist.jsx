@@ -25,11 +25,19 @@ const Wishlist = () => {
                 {wishlist.length === 0 ? (
                     <div>
                         <img
-                            className="empty_cart"
+                            className="empty_wishlist"
                             src="https://res.cloudinary.com/dwegb6a4s/image/upload/v1690053520/My_wishlist_yltjjo.png"
                             alt="empty-cart-img"
                         />
-                        <h3>Your Wishlist is empty.</h3>
+                        <div className="wishlist_warn">
+                            <h3>Your Wishlist is empty!</h3>
+                            <NavLink
+                                className="explore_products"
+                                to="/products"
+                            >
+                                Explore
+                            </NavLink>
+                        </div>
                     </div>
                 ) : (
                     <div className="products__page__container">

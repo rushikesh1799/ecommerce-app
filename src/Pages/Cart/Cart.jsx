@@ -73,7 +73,12 @@ const Cart = () => {
                         src="https://res.cloudinary.com/dwegb6a4s/image/upload/v1689681810/empty_cart_2_b8rb9k.png"
                         alt="empty-cart-img"
                     />
-                    <h3>Your Cart is empty.</h3>
+                    <div className="cart_warn">
+                        <h3>Your Cart is empty!</h3>
+                        <NavLink className="explore_products" to="/products">
+                            Explore
+                        </NavLink>
+                    </div>
                 </div>
             ) : (
                 <div className="cart_main_Container">

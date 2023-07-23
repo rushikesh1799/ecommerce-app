@@ -96,3 +96,22 @@
 .empty_cart {
     width: 40%;
 }
+
+.explore_products {
+    color: #FFF;
+    letter-spacing: 1px;
+    background-color: #3B82F6;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.explore_products:hover {
+    background-color: #215ab7;
+}
+
+.cart_warn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

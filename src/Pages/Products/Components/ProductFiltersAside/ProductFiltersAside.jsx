@@ -137,7 +137,7 @@ const ProductFiltersAside = () => {
                             }
                         />
                         <label className="cursor-pointer" htmlFor="4star-radio">
-                            4 stars &amp; above
+                            4 Stars &amp; above
                         </label>
                     </div>
                     <div className="productlist-input-item">
@@ -156,7 +156,7 @@ const ProductFiltersAside = () => {
                             }
                         />
                         <label className="cursor-pointer" htmlFor="3star-radio">
-                            3 stars &amp; above
+                            3 Stars &amp; above
                         </label>
                     </div>
                     <div className="productlist-input-item">
@@ -175,7 +175,7 @@ const ProductFiltersAside = () => {
                             }
                         />
                         <label className="cursor-pointer" htmlFor="2star-radio">
-                            2 stars &amp; above
+                            2 Stars &amp; above
                         </label>
                     </div>
                     <div className="productlist-input-item">
@@ -194,7 +194,7 @@ const ProductFiltersAside = () => {
                             }
                         />
                         <label className="cursor-pointer" htmlFor="1star-radio">
-                            1 stars &amp; above
+                            1 Stars &amp; above
                         </label>
                     </div>
                 </div>
@@ -296,7 +296,7 @@ const ProductFiltersAside = () => {
                     //     })
                     // }
                 >
-                    <label htmlFor="low-to-high">
+                    <label htmlFor="low-to-high" className="cursor-pointer">
                         <input
                             type="radio"
                             value="low-to-high"
@@ -310,9 +310,9 @@ const ProductFiltersAside = () => {
                                 })
                             }
                         />
-                        price - Low-to-High
+                        Price - Low-to-High
                     </label>
-                    <label htmlFor="high-to-low">
+                    <label htmlFor="high-to-low" className="cursor-pointer">
                         <input
                             type="radio"
                             value="high-to-low"
@@ -326,9 +326,9 @@ const ProductFiltersAside = () => {
                                 })
                             }
                         />
-                        price - High-to-Low
+                        Price - High-to-Low
                     </label>
-                    <label htmlFor="reset">
+                    <label htmlFor="reset" className="cursor-pointer">
                         <input
                             type="radio"
                             value="reset"

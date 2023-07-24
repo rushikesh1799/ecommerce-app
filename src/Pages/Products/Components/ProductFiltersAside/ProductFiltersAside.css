@@ -52,7 +52,18 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+}
 
+.productlist-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.product-filter-sortBy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
 }
 
 .product-filter-checkboxes label,
@@ -63,4 +74,8 @@
 .product-filter-sortBy {
     display: flex;
     flex-direction: column;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

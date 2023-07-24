@@ -30,6 +30,15 @@
     object-position: top center;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+
+
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.productlist-card-img:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1.05);
 }
 
 .product_card_title {

@@ -16,15 +16,18 @@
 }
 
 .single_product_image_container {
+    /* width: 50%; */
+
     position: relative;
 }
 
 .single_product_image_container img {
-    /* max-height: 20rem;
+    max-height: 20rem;
     max-width: 25rem;
-    min-height: 20rem;
+    min-height: 37rem;
     min-width: 80%;
-    overflow: hidden; */
+    overflow: hidden;
+
     border-radius: 1rem;
 
 }

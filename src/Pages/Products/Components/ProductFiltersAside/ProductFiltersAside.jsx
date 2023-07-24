@@ -98,16 +98,16 @@ const ProductFiltersAside = () => {
                     <label>
                         <input
                             type="checkbox"
-                            value="Electronics"
+                            value="Kids"
                             onChange={(e) =>
                                 dispatch({
                                     type: "Add_Category_Filter",
                                     payload: e.target.value,
                                 })
                             }
-                            checked={isCategoryPresent("Electronics")}
+                            checked={isCategoryPresent("Kids")}
                         />
-                        Electronics
+                        Kids
                     </label>
                 </div>
             </div>

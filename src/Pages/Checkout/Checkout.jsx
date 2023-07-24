@@ -159,13 +159,9 @@ const Checkout = () => {
                                 backgroundColor: "#3b82f6",
                             },
                         }}
+                        onClick={handlePlaceOrder}
                     >
-                        <span
-                            className="btn_content"
-                            onClick={handlePlaceOrder}
-                        >
-                            Place Order
-                        </span>
+                        <span className="btn_content">Place Order</span>
                     </Button>
                 </div>
             </div>

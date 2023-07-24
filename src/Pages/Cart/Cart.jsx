@@ -90,11 +90,11 @@ const Cart = () => {
                     <div className="cart__details">
                         <div className="cart__page__container">
                             {cartlist.map((product) => (
-                                <div className="cart-main-cards-container">
-                                    <CartProductCard
-                                        product={product}
-                                        key={product.id}
-                                    />
+                                <div
+                                    className="cart-main-cards-container"
+                                    key={product.id}
+                                >
+                                    <CartProductCard product={product} />
                                 </div>
                             ))}
                         </div>
@@ -105,7 +105,7 @@ const Cart = () => {
                             <hr />
                             {cartlist.map((cartItem) => (
                                 <div
-                                    key={cartItem._id}
+                                    key={cartItem.id}
                                     className="cart__price__item"
                                 >
                                     <div>

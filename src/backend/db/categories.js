@@ -24,11 +24,11 @@ export const categories = [
     },
     {
         _id: uuid(),
-        categoryName: "Electronics",
+        categoryName: "Kids Collection",
         categoryImg:
             "https://img.freepik.com/free-photo/happy-kid-is-shopping-outdoors_624325-553.jpg?w=2000",
-        routeName: "Electronics",
-        desc: "Check out our best Electronics collection",
+        routeName: "Kids",
+        desc: "Check out our best Kids collection",
     },
 ];
 // https://imgmedia.lbb.in/media/2020/10/5f9bc0a57372a75dc5da61fb_1604042917760.jpg

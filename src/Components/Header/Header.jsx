@@ -13,7 +13,7 @@ const Header = () => {
     const [flag, setFlag] = useState(false);
 
     const navigate = useNavigate();
-    const { dispatch, inputSearchedProducts, filters } =
+    const { dispatch, inputSearchedProducts, filters, cartlist, wishlist } =
         useContext(DataContext);
 
     const handleLogout = () => {
@@ -32,8 +32,16 @@ const Header = () => {
 
     return (
         <nav className="navigation">
-            <section className="nav-left-section">
-                <h1 onClick={() => navigate("/")}>Fashion Fusion</h1>
+            <section className="nav-left-section" onClick={() => navigate("/")}>
+                <img
+                    className="hero_logo"
+                    src="https://res.cloudinary.com/dwegb6a4s/image/upload/v1690205577/main_tmyhpx.jpg"
+                    alt="hero_logo"
+                />
+                <div className="hero_title">
+                    <h1>Fashion</h1>
+                    <h1>Fusion</h1>
+                </div>
             </section>
 
             {/* <form action=""> */}
@@ -245,29 +253,46 @@ const Header = () => {
                     >
                         Explore
                     </li>
-
-                    <li
-                        className="nav-link-item"
-                        onClick={() => navigate("/wishlist")}
-                    >
-                        <i
-                            className="fa fa-heart-o fa-lg"
-                            aria-hidden="true"
-                        ></i>
-                    </li>
-                    <li
-                        className="nav-link-item"
-                        onClick={() => navigate("/cart")}
-                    >
-                        <i
-                            className="fa fa-shopping-cart fa-lg"
-                            aria-hidden="true"
-                        ></i>
-                    </li>
+                    <div className="wishlist-nav-btn">
+                        <li
+                            className="nav-link-item"
+                            onClick={() => navigate("/wishlist")}
+                        >
+                            <i
+                                className="fa fa-heart-o fa-lg"
+                                aria-hidden="true"
+                            ></i>
+                        </li>
+                        {wishlist.length === 0 ? (
+                            ""
+                        ) : (
+                            <div className="cart_items_count">
+                                {wishlist.length}
+                            </div>
+                        )}
+                    </div>
+                    <div className="cart-nav-btn">
+                        <li
+                            className="nav-link-item"
+                            onClick={() => navigate("/cart")}
+                        >
+                            <i
+                                className="fa fa-shopping-cart fa-lg"
+                                aria-hidden="true"
+                            ></i>
+                        </li>
+                        {cartlist.length === 0 ? (
+                            ""
+                        ) : (
+                            <div className="cart_items_count">
+                                {cartlist.length}
+                            </div>
+                        )}
+                    </div>
 
                     {!token && (
                         <li
-                            className="nav-link-item"
+                            className="nav-link-item login_btn"
                             onClick={() => navigate("/login")}
                         >
                             Login

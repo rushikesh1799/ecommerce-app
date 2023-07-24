@@ -36,7 +36,7 @@ const CartProductCard = ({ product }) => {
                 <div onClick={() => navigate(`/products/${product._id}`)}>
                     <img
                         className="cart_product_card_img"
-                        src="https://plus.unsplash.com/premium_photo-1671656349262-1e1d3e09735c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                        src={product.image}
                         alt={product.title}
                     />
                 </div>

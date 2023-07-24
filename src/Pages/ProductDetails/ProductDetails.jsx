@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { DataContext } from "../../context/DataProvider";
 import Header from "../../Components/Header/Header";
 import "./ProductDetails.css";
+import Footer from "../../Components/Footer/Footer";
+
 
 import StarIcon from "@mui/icons-material/Star";
 import { Button } from "@mui/material";
@@ -30,10 +32,7 @@ const ProductDetails = () => {
             <Header />
             <main className="single_product_main_container">
                 <div className="single_product_image_container">
-                    <img
-                        src="https://plus.unsplash.com/premium_photo-1671656349262-1e1d3e09735c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                        alt={Product.title}
-                    />
+                    <img src={Product.image} alt={Product.title} />
                     {isItemPresentInWishlist(Product) ? (
                         <i
                             className="fa fa-heart single_product_wishlisted_btn"
@@ -154,6 +153,7 @@ const ProductDetails = () => {
                     )}
                 </div>
             </main>
+            <Footer />
         </div>
     );
 };

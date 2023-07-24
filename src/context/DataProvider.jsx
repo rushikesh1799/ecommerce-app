@@ -86,9 +86,9 @@ export const DataProvider = ({ children }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    useEffect(() => {
-        console.log("order_summary:", order_summary);
-    }, [order_summary]);
+    // useEffect(() => {
+    //     console.log("order_summary:", order_summary);
+    // }, [order_summary]);
     // useEffect(() => {
     //     console.log("location:", location);
     // }, [location]);

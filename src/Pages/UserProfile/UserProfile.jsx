@@ -34,9 +34,9 @@ const UserProfile = () => {
         ReactToastify("Logged Out Successfully", "success");
     };
 
-    useEffect(() => {
-        console.log(order_summary);
-    }, [order_summary]);
+    // useEffect(() => {
+    //     console.log(order_summary);
+    // }, [order_summary]);
 
     const style = {
         backgroundColor: "black",

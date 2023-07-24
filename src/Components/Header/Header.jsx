@@ -23,12 +23,12 @@ const Header = () => {
         localStorage.removeItem("user");
     };
 
-    useEffect(() => {
-        console.log("inputSearchedProducts", inputSearchedProducts);
-    }, [inputSearchedProducts]);
-    useEffect(() => {
-        console.log("flag", flag);
-    }, [flag]);
+    // useEffect(() => {
+    //     console.log("inputSearchedProducts", inputSearchedProducts);
+    // }, [inputSearchedProducts]);
+    // useEffect(() => {
+    //     console.log("flag", flag);
+    // }, [flag]);
 
     return (
         <nav className="navigation">

@@ -2,14 +2,13 @@
     /* height: 95vh; */
     /* text-align: initial; */
     /* background-color: antiquewhite; */
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    cursor: pointer;
+    
 }
 
 .banner_hero_img {
-    /* width: 90%; */
-    width: 100%;
-    height: 80vh;
-    display: block;
+    width: 85%;
+    height: 85vh;
     object-fit: cover;
 }

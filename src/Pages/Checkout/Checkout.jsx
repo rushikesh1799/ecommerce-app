@@ -38,7 +38,10 @@ const Checkout = () => {
             payload: {
                 selectedAddress: selectedAddress,
                 currentCartItems: [...cartlist],
-                totalOrderValue: totalCartValue.toFixed(2) - 40 + 20,
+                totalOrderValue:
+                    totalCartValue.toFixed(2) -
+                    (totalCartValue * 40) / 100 +
+                    40,
             },
         });
     }, [selectedAddress, cartlist]);
@@ -134,17 +137,21 @@ const Checkout = () => {
                         <p>{totalCartValue.toFixed(2)}</p>
                     </div>
                     <div className="checkout_item">
-                        <p>Discount</p>
-                        <p>-40</p>
+                        <p>Discount (40%)</p>
+                        <p>{-(totalCartValue * 40) / 100}</p>
                     </div>
                     <div className="checkout_item">
                         <p>Delivery Charges</p>
-                        <p>20</p>
+                        <p>40</p>
                     </div>
                     <hr />
                     <div className="checkout_item">
                         <p>Total Price</p>
-                        <p>{totalCartValue.toFixed(2) - 40 + 20}</p>
+                        <p>
+                            {totalCartValue.toFixed(2) -
+                                (totalCartValue * 40) / 100 +
+                                40}
+                        </p>
                     </div>
 
                     <Button

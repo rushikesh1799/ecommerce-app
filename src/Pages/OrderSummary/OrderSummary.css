@@ -8,7 +8,8 @@
     background-color: #f4f4f4;
     border-radius: 5px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
-
 }
 
-.orderSummary_text {}
+.order-animation {
+    position: absolute;
+}

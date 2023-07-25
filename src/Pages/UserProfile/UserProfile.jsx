@@ -165,6 +165,8 @@ const UserProfile = () => {
                                         <p>
                                             {order.addressToDeliver.state + "."}
                                         </p>
+                                        <h3>Total Order Price:</h3>
+                                        <p>₹ {order.totalOrderValue}/-</p>
                                     </div>
                                 </div>
                             ))}

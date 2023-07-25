@@ -21,6 +21,10 @@
     position: relative;
 }
 
+.product_card_desc {
+    max-width: 25rem;
+}
+
 .single_product_image_container img {
     max-height: 20rem;
     max-width: 25rem;

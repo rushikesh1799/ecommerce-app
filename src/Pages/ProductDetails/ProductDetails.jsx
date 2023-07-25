@@ -6,7 +6,6 @@ import Header from "../../Components/Header/Header";
 import "./ProductDetails.css";
 import Footer from "../../Components/Footer/Footer";
 
-
 import StarIcon from "@mui/icons-material/Star";
 import { Button } from "@mui/material";
 
@@ -78,7 +77,9 @@ const ProductDetails = () => {
                             <span>({Product?.percentage}% OFF)</span>
                         </div>
                     </div>
-                    <div>{Product.description}</div>
+                    <div className="product_card_desc">
+                        {Product.description}
+                    </div>
                     <div className="single_product_card_availability">
                         <b>Availability:</b>
                         {Product.instock ? (

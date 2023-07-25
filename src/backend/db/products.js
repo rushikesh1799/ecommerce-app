@@ -169,7 +169,8 @@ export const products = [
     {
         _id: uuid(),
         title: "Women's Dress",
-        description: "A stylish blouse for women",
+        description:
+            "Elegant women's dress: Timeless style, flattering fit, ultimate sophistication",
         price: 1199,
         origianlPrice: 2099,
         percentage: 43,
@@ -197,7 +198,8 @@ export const products = [
     {
         _id: uuid(),
         title: "Women's Dress",
-        description: "A comfortable t-shirt for women",
+        description:
+            "Chic women's dress: Effortless grace, versatile, fashion-forward must-have.",
         price: 799,
         origianlPrice: 1499,
         percentage: 47,
@@ -225,7 +227,8 @@ export const products = [
     {
         _id: uuid(),
         title: "Women's Dress",
-        description: "A cozy sweater for women",
+        description:
+            "Feminine dress: Graceful silhouette, radiant colors, confident charm.",
         price: 1399,
         origianlPrice: 1999,
         percentage: 30,
@@ -239,7 +242,8 @@ export const products = [
     {
         _id: uuid(),
         title: "Women's Dress",
-        description: "A warm coat for women",
+        description:
+            "Stunning women's dress: Alluring design, impeccable craftsmanship, pure elegance.",
         price: 1399,
         origianlPrice: 1999,
         percentage: 30,
@@ -273,7 +277,7 @@ export const products = [
         percentage: 33,
         brand: "XYZ Brand",
         size: "XL",
-        rating: 3.9,
+        rating: 2.9,
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187797/e-commerce/Women/Women_s_JumpSuit_wc639z.jpg",
         category: "women",
         reviews: "2.7k",
@@ -281,7 +285,8 @@ export const products = [
     {
         _id: uuid(),
         title: "Women's Dress",
-        description: "A fashionable top for women",
+        description:
+            "Exquisite women's dress: Timeless beauty, luxurious fabric, captivating allure.",
         price: 649,
         origianlPrice: 999,
         percentage: 35,
@@ -319,7 +324,7 @@ export const products = [
         percentage: 33,
         brand: "Fashion Kids",
         size: "L",
-        rating: 4.2,
+        rating: 3.2,
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_dress_r3ebyj.jpg",
         category: "kids",
         reviews: "6.5k",
@@ -333,7 +338,7 @@ export const products = [
         percentage: 38,
         brand: "Cool Kids",
         size: "S",
-        rating: 4.7,
+        rating: 2.7,
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_tshirt_pant_2_lplgkl.jpg",
         category: "kids",
         reviews: "4.9k",
@@ -347,7 +352,7 @@ export const products = [
         percentage: 33,
         brand: "Sweetie Pies",
         size: "M",
-        rating: 4.8,
+        rating: 2.8,
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188124/e-commerce/Kids/Kids_s_tshirt_pant_1_q56gc3.jpg",
         category: "kids",
         reviews: "7.1k",
@@ -375,7 +380,7 @@ export const products = [
         percentage: 43,
         brand: "Kicks and Run",
         size: "M",
-        rating: 4.6,
+        rating: 2.6,
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188126/e-commerce/Kids/Kids_s_Shoes_ljruqd.png",
         category: "kids",
         reviews: "5.5k",
@@ -403,7 +408,7 @@ export const products = [
         percentage: 33,
         brand: "XYZ Kids",
         size: "L",
-        rating: 4.1,
+        rating: 3.1,
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_watch_1_oslgzd.jpg",
         category: "kids",
         reviews: "3.9k",
@@ -431,7 +436,7 @@ export const products = [
         percentage: 33,
         brand: "Kicks and Run",
         size: "L",
-        rating: 4.7,
+        rating: 3.7,
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_Sandles_fjnuc5.jpg",
         category: "kids",
         reviews: "6.4k",

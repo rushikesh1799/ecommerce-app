@@ -36,6 +36,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690186784/e-commerce/Men/Men_s_Hoodie_c9tgwy.jpg",
         category: "men",
         reviews: "1.5k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -50,6 +51,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690186784/e-commerce/Men/Men_s_Jeans_gsynuf.jpg",
         category: "men",
         reviews: "1.9k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -64,6 +66,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690186784/e-commerce/Men/Men_s_polo_shirt_p3pvbw.jpg",
         category: "men",
         reviews: "2.5k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -78,6 +81,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690186784/e-commerce/Men/Men_s_dress_shirt_uoyut1.jpg",
         category: "men",
         reviews: "1.9k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -92,6 +96,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690186785/e-commerce/Men/Men_s_shorts_si4u7w.jpg",
         category: "men",
         reviews: "1.6k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -106,6 +111,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690194672/e-commerce/New%20Men/Men_s_blazer_ttvffp.jpg",
         category: "men",
         reviews: "1.8k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -120,6 +126,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690186785/e-commerce/Men/Men_s_sweatpants_rxpo9l.jpg",
         category: "men",
         reviews: "1.2k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -134,6 +141,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690186785/e-commerce/Men/Men_s_winter_jacket_hynmyt.jpg",
         category: "men",
         reviews: "1.3k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -148,6 +156,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690186785/e-commerce/Men/Men_s_socks_vk37gk.jpg",
         category: "men",
         reviews: "1.5k",
+        instock: true,
     },
 
     // Women's data
@@ -165,6 +174,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187796/e-commerce/Women/Women_s_dress_2_xntp5e.jpg",
         category: "women",
         reviews: "1.6k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -180,6 +190,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187796/e-commerce/Women/Women_s_dress_3_xbvdih.jpg",
         category: "women",
         reviews: "1.7k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -194,6 +205,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187797/e-commerce/Women/Women_s_Jeans_fqntbn.jpg",
         category: "women",
         reviews: "2.7k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -209,6 +221,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187795/e-commerce/Women/Women_s_dress_4_iep0pg.jpg",
         category: "women",
         reviews: "1.7k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -223,6 +236,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187797/e-commerce/Women/Women_s_Skirt_xzpbyw.jpg",
         category: "women",
         reviews: "2.7k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -238,6 +252,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187795/e-commerce/Women/Women_s_dress_5_pgr8y9.jpg",
         category: "women",
         reviews: "6.7k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -253,6 +268,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187795/e-commerce/Women/Women_s_dress_6_pq210b.jpg",
         category: "women",
         reviews: "4.7k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -267,6 +283,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187797/e-commerce/Women/Women_s_Leggings_yy6lsp.jpg",
         category: "women",
         reviews: "20.7k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -281,6 +298,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187797/e-commerce/Women/Women_s_JumpSuit_wc639z.jpg",
         category: "women",
         reviews: "2.7k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -296,6 +314,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690187795/e-commerce/Women/Women_s_dress_7_u1nlaf.jpg",
         category: "women",
         reviews: "10.7k",
+        instock: true,
     },
 
     // Kids data
@@ -313,6 +332,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_tshirt_pant_ofyhct.jpg",
         category: "kids",
         reviews: "8.3k",
+        instock: true,
     },
 
     {
@@ -328,6 +348,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_dress_r3ebyj.jpg",
         category: "kids",
         reviews: "6.5k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -342,6 +363,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_tshirt_pant_2_lplgkl.jpg",
         category: "kids",
         reviews: "4.9k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -356,6 +378,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188124/e-commerce/Kids/Kids_s_tshirt_pant_1_q56gc3.jpg",
         category: "kids",
         reviews: "7.1k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -370,6 +393,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188126/e-commerce/Kids/Kids_s_tshirt_pant_3_wm1xvu.jpg",
         category: "kids",
         reviews: "3.2k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -384,6 +408,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188126/e-commerce/Kids/Kids_s_Shoes_ljruqd.png",
         category: "kids",
         reviews: "5.5k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -398,6 +423,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188126/e-commerce/Kids/Kids_s_watch_ijtwg0.jpg",
         category: "kids",
         reviews: "2.8k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -412,6 +438,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_watch_1_oslgzd.jpg",
         category: "kids",
         reviews: "3.9k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -426,6 +453,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_tshirt_pant_4_zdwrph.jpg",
         category: "kids",
         reviews: "9.2k",
+        instock: true,
     },
     {
         _id: uuid(),
@@ -440,6 +468,7 @@ export const products = [
         image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690188125/e-commerce/Kids/Kids_s_Sandles_fjnuc5.jpg",
         category: "kids",
         reviews: "6.4k",
+        instock: true,
     },
 
     // Electronics data

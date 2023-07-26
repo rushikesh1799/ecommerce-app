@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Banner.css";
 import { useNavigate } from "react-router-dom";
+import { DataContext } from "../../context/DataProvider";
 
 const Banner = () => {
     const navigate = useNavigate();
+    const { dispatch } = useContext(DataContext);
 
     return (
         <section
             className="banner-container"
-            onClick={() => navigate("/products")}
+            onClick={() => {
+                navigate("/products");
+                dispatch({ type: "clear-all-filters" });
+            }}
         >
             <img
                 className="banner_hero_img"

@@ -16,7 +16,11 @@ const style = {
     bgcolor: "background.paper",
     border: "2px solid #000",
     boxShadow: 24,
+    borderRadius: "8px",
     p: 4,
+    "@media (max-width: 768px)": {
+        width: 300,
+    },
 };
 
 const EditAddressModal = ({ address }) => {

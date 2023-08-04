@@ -19,7 +19,11 @@ const style = {
     bgcolor: "background.paper",
     border: "2px solid #000",
     boxShadow: 24,
+    borderRadius: "8px",
     p: 4,
+    "@media (max-width: 768px)": {
+        width: 300,
+    },
 };
 
 const CreateNewAddressModal = () => {
@@ -72,6 +76,7 @@ const CreateNewAddressModal = () => {
                 Add new Address
             </Button>
             <Modal
+                className="new_address_modal"
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"

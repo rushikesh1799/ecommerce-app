@@ -4,9 +4,10 @@ import "./ProductFiltersAside.css";
 import { DataContext } from "../../../../context/DataProvider";
 
 import Button from "@mui/material/Button";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const ProductFiltersAside = () => {
-    const { state, dispatch, filters } = useContext(DataContext);
+    const { state, dispatch, filters, flag, setFlag } = useContext(DataContext);
 
     const isCategoryPresent = (value) => filters.categories.includes(value);
     const isSizePresent = (value) => filters.sizes.includes(value);
@@ -22,6 +23,12 @@ const ProductFiltersAside = () => {
 
     return (
         <div className="product-filter-aside">
+            {flag ? (
+                <div onClick={() => setFlag(false)} className="up_arrow">
+                    <KeyboardArrowDownIcon />
+                </div>
+            ) : null}
+
             <div className="product-filter-aside-clear-item">
                 <h3>Filters: </h3>
 

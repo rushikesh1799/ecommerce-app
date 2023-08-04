@@ -24,7 +24,7 @@ const OrderSummary = () => {
                 <div className="orderSummary_container">
                     <div className="productlist-main-cards-container">
                         {boughtItems.map((product) => (
-                            <Product product={product} />
+                            <Product product={product} key={product.id}/>
                         ))}
                     </div>
                     <div className="orderSummary_text">

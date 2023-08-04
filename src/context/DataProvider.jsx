@@ -69,6 +69,7 @@ const initialState = {
 export const DataProvider = ({ children }) => {
     const [state, dispatch] = useReducer(DataReducer, initialState);
     const [selectedAddress, setSelectedAddress] = useState();
+    const [flag, setFlag] = useState(false);
 
     const {
         products,
@@ -394,6 +395,8 @@ export const DataProvider = ({ children }) => {
                 selectedAddress,
                 inputSearchedProducts,
                 order_summary,
+                flag,
+                setFlag,
                 setSelectedAddress,
                 cartHandler,
                 removeItemFromCart,

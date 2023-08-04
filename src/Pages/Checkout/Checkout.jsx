@@ -23,11 +23,12 @@ const Checkout = () => {
         setSelectedAddress,
         orderObj,
         dispatch,
+        order_summary,
     } = useContext(DataContext);
 
-    useEffect(() => {
-        console.log("orderObj", orderObj);
-    }, [orderObj]);
+    // useEffect(() => {
+    //     console.log("orderObj", orderObj);
+    // }, [orderObj]);
     // useEffect(() => {
     //     console.log("selectedAddress", selectedAddress);
     // }, [selectedAddress]);
@@ -76,7 +77,7 @@ const Checkout = () => {
             });
             setSelectedAddress();
             removeAllCartItems();
-            console.log("Order Placed");
+            // console.log("Order Placed");
         }
     };
 

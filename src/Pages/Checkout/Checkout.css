@@ -55,3 +55,16 @@
 .address_card label {
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    .checkout_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        /* justify-content: space-around;
+        height: 90vh;
+        margin-top: 2rem;
+        padding: 1rem;
+        gap: 2rem; */
+    }
+}

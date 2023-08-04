@@ -50,3 +50,9 @@
   font-size: 1.2rem;
   margin: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+}

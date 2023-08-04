@@ -30,3 +30,10 @@
 .devider {
     margin: 0px 2px;
 }
+
+@media screen and (max-width: 768px) {
+    .ratings_reviews {
+        position: absolute;
+        bottom: 80px;
+    }
+}

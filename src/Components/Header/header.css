@@ -1,10 +1,6 @@
 .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     background-color: #fff;
     position: sticky;
-
     box-shadow: 0 7px 29px 0 rgba(100, 100, 111, .2);
     top: 0;
     right: 0;
@@ -13,6 +9,16 @@
 
     padding: 0.5rem;
 
+}
+
+.navigation_desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav_mobile {
+    display: none;
 }
 
 .nav-left-section {
@@ -27,7 +33,7 @@
     border-radius: 50%;
 }
 
-.hero_title{
+.hero_title {
     display: flex;
     flex-direction: column;
 }
@@ -140,3 +146,15 @@
     width: 1.5rem;
 }
 
+@media screen and (max-width: 768px) {
+    .nav_desktop {
+        display: none;
+    }
+
+    .nav_mobile {
+        display: block;
+        margin: 0.5rem auto;
+        width: 90%;
+        padding: 0;
+    }
+}

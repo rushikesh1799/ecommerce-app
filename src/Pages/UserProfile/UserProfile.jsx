@@ -137,8 +137,11 @@ const UserProfile = () => {
                         <h3>Order History</h3>
                         <hr />
                         <div>
-                            {order_summary.map((order) => (
-                                <div className="order_history_order">
+                            {order_summary.map((order, index) => (
+                                <div
+                                    className="order_history_order"
+                                    key={index}
+                                >
                                     <div>
                                         {order.boughtItems.map((product) => (
                                             <Product

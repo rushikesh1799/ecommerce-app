@@ -93,7 +93,7 @@ const Products = () => {
         const from = (page - 1) * paginationData.pageSize;
         const to =
             (page - 1) * paginationData.pageSize + paginationData.pageSize;
-        console.log("from", from, "to", to);
+        // console.log("from", from, "to", to);
         dispatch({
             type: "CHANGE_PAGINATION_FILTERS",
             payload: { from: from, to: to },
@@ -117,7 +117,7 @@ const Products = () => {
                             <Product product={product} key={product._id} />
                         ))}
                     </div>
-                    <Stack spacing={2}>
+                    <Stack spacing={2} className="pagination_container">
                         <Pagination
                             count={Math.ceil(RatingFilteredData.length / 8)}
                             onChange={handlePageChange}

@@ -13,7 +13,7 @@ import { AuthContext } from "../../context/AuthContext";
 const Checkout = () => {
     const navigate = useNavigate();
 
-    const { token } = useContext(AuthContext);
+    const { user, token } = useContext(AuthContext);
 
     const {
         cartlist,
@@ -26,9 +26,9 @@ const Checkout = () => {
         order_summary,
     } = useContext(DataContext);
 
-    // useEffect(() => {
-    //     console.log("orderObj", orderObj);
-    // }, [orderObj]);
+    useEffect(() => {
+        console.log("order_summary", order_summary);
+    }, [order_summary]);
     // useEffect(() => {
     //     console.log("selectedAddress", selectedAddress);
     // }, [selectedAddress]);
@@ -66,17 +66,73 @@ const Checkout = () => {
         });
     };
 
+    const loadScript = async (url) => {
+        return new Promise((resolve) => {
+            const script = document.createElement("script");
+            script.src = url;
+
+            script.onload = () => {
+                resolve(true);
+            };
+
+            script.onerror = () => {
+                resolve(false);
+            };
+            document.body.appendChild(script);
+        });
+    };
+
+    const displayRazorpay = async () => {
+        const res = await loadScript(
+            "https://checkout.razorpay.com/v1/checkout.js"
+        );
+
+        if (!res) {
+            ReactToastify(
+                "Razorpay SDK failed to load, check you connection",
+                "error"
+            );
+            return;
+        }
+
+        const options = {
+            key: "rzp_test_I9ZAQpadkek2ay",
+            amount: totalCartValue * 100,
+            currency: "INR",
+            name: "FashionFusion",
+            description: "Thank you for shopping with us",
+            image: "https://res.cloudinary.com/dwegb6a4s/image/upload/v1690205577/main_tmyhpx.jpg",
+            handler: function (response) {
+                navigate("/order-summary");
+                dispatch({
+                    type: "ORDER_PLACED",
+                    payload: {
+                        cartlist: [],
+                        currentOrder: orderObj,
+                        id: response.razorpay_payment_id,
+                    },
+                });
+                setSelectedAddress();
+                removeAllCartItems();
+            },
+            prefill: {
+                name: `${user.firstName} ${user.lastName}`,
+                email: user.email,
+                contact: "7058693670",
+            },
+            theme: {
+                color: "#2B51E1",
+            },
+        };
+        const paymentObject = new window.Razorpay(options);
+        paymentObject.open();
+    };
+
     const handlePlaceOrder = () => {
         if (!selectedAddress) {
             ReactToastify("Please select the address", "info");
         } else {
-            navigate("/order-summary");
-            dispatch({
-                type: "ORDER_PLACED",
-                payload: { cartlist: [], currentOrder: orderObj },
-            });
-            setSelectedAddress();
-            removeAllCartItems();
+            displayRazorpay();
             // console.log("Order Placed");
         }
     };

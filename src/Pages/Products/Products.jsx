@@ -9,9 +9,11 @@ import Product from "../../Components/Product/Product";
 import Footer from "../../Components/Footer/Footer";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { Pagination, Stack } from "@mui/material";
 
 const Products = () => {
-    const { products, filters, flag, setFlag } = useContext(DataContext);
+    const { products, filters, flag, setFlag, dispatch, paginationData } =
+        useContext(DataContext);
 
     const sortByPriceData =
         filters.sortBy === "low-to-high"
@@ -60,11 +62,45 @@ const Products = () => {
               )
             : sizeFilteredData;
 
-    // console.log("RatingFilteredData", RatingFilteredData);
+    // Pagination logic starts
+
+    // const [productsToShow, setProductsToShow] = useState([]);
+    // useEffect(() => {
+    //     console.log(productsToShow);
+    //     setProductsToShow(productsToShow);
+    // }, [RatingFilteredData]);
+
+    const productsToShow = RatingFilteredData.slice(
+        paginationData.from,
+        paginationData.to
+    );
 
     // useEffect(() => {
-    //     console.log("flag:", flag);
-    // }, [flag]);
+    //     console.log("productsToShow", productsToShow);
+    //     console.log("paginationData", paginationData);
+    // }, [paginationData]);
+
+    // useEffect(() => {
+    //     const updatedProducts = products.slice(
+    //         paginationData.from,
+    //         paginationData.to
+    //     );
+
+    //     setProductsData(updatedProducts);
+    // }, [paginationData.from, paginationData.to]);
+
+    const handlePageChange = (e, page) => {
+        const from = (page - 1) * paginationData.pageSize;
+        const to =
+            (page - 1) * paginationData.pageSize + paginationData.pageSize;
+        console.log("from", from, "to", to);
+        dispatch({
+            type: "CHANGE_PAGINATION_FILTERS",
+            payload: { from: from, to: to },
+        });
+    };
+
+    // Pagination logic ends
 
     return (
         <div>
@@ -77,10 +113,17 @@ const Products = () => {
                 <div className="products__right__container">
                     <p>{RatingFilteredData.length} Products Found</p>
                     <div className="productlist-main-cards-container">
-                        {RatingFilteredData.map((product) => (
+                        {productsToShow.map((product) => (
                             <Product product={product} key={product._id} />
                         ))}
                     </div>
+                    <Stack spacing={2}>
+                        <Pagination
+                            count={Math.ceil(RatingFilteredData.length / 8)}
+                            onChange={handlePageChange}
+                            color="primary"
+                        />
+                    </Stack>
                 </div>
             </div>
             {flag ? (

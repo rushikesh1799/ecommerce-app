@@ -64,6 +64,11 @@ const initialState = {
         password: "",
     },
     Authtoken: null,
+    paginationData: {
+        from: 0,
+        to: 8,
+        pageSize: 8,
+    },
 };
 
 export const DataProvider = ({ children }) => {
@@ -81,6 +86,7 @@ export const DataProvider = ({ children }) => {
         addresses,
         orderObj,
         order_summary,
+        paginationData,
     } = state;
     const { user, token, setToken, setUser } = useContext(AuthContext);
 
@@ -409,6 +415,7 @@ export const DataProvider = ({ children }) => {
                 loginAsGuest,
                 handleRemoveAddress,
                 totalCartValue,
+                paginationData,
             }}
         >
             {children}

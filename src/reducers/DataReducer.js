@@ -189,7 +189,15 @@ export const DataReducer = (state, action) => {
                     action.payload.currentOrder,
                 ],
             };
-
+        case "CHANGE_PAGINATION_FILTERS":
+            return {
+                ...state,
+                paginationData: {
+                    ...state.paginationData,
+                    from: action.payload.from,
+                    to: action.payload.to,
+                },
+            };
         default:
             return state;
     }

@@ -1,3 +1,9 @@
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
 .page-container {
     display: flex;
     justify-content: center;
@@ -15,15 +21,23 @@
     position: absolute;
 }
 
+
+
 .signup-form-container h1 {
-    margin: 0;
+    margin: 1rem 0;
 }
 
 .signup-form label {
     display: block;
     text-align: start;
-    margin-bottom: 10px;
     font-weight: bold;
+}
+
+.signUp__form__field {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 0.25rem
 }
 
 .signup-form input[type="text"],
@@ -48,6 +62,12 @@
 }
 
 
+
+.password__field {
+    position: relative;
+    width: 100%;
+}
+
 .password__icon {
     cursor: pointer;
     font-size: 18px;
@@ -56,12 +76,22 @@
     top: 8px;
 }
 
-.password__field {
-    position: relative;
-    width: 100%;
-}
-
 .login_link {
     color: blue;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .signup-form-container {
+        width: 75%;
+    }
+
+    .password__icon {
+        cursor: pointer;
+        font-size: 18px;
+        position: absolute;
+        right: 0px;
+        top: 8px;
+    }
+
 }

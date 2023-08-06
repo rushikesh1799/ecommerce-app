@@ -72,8 +72,8 @@ const Signup = () => {
                     <h1>Register</h1>
                     <form onSubmit={handleSignUp} className="signup-form">
                         <div className="signUp__form__field">
-                            <label>
-                                First Name:
+                            <label>First Name:</label>
+                            <div>
                                 <input
                                     type="text"
                                     value={signUpInfo.firstName}
@@ -85,11 +85,11 @@ const Signup = () => {
                                         }))
                                     }
                                 />
-                            </label>
+                            </div>
                         </div>
                         <div className="signUp__form__field">
-                            <label>
-                                Last Name:
+                            <label>Last Name:</label>
+                            <div>
                                 <input
                                     type="text"
                                     value={signUpInfo.lastName}
@@ -101,11 +101,11 @@ const Signup = () => {
                                         }))
                                     }
                                 />
-                            </label>
+                            </div>
                         </div>
                         <div className="signUp__form__field">
-                            <label>
-                                Email:
+                            <label>Email: </label>
+                            <div>
                                 <input
                                     type="email"
                                     value={signUpInfo.email}
@@ -117,7 +117,7 @@ const Signup = () => {
                                         }))
                                     }
                                 />
-                            </label>
+                            </div>
                         </div>
                         <div className="signUp__form__field">
                             <label>Password:</label>

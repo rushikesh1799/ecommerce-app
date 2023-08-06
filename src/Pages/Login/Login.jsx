@@ -115,7 +115,7 @@ const Login = () => {
                             Login with Guest Credentials
                         </button>
                         <span>
-                            <b>Don't have an account? </b>
+                            <b className="login_note">Don't have an account? </b>
                             <NavLink className="signup_link" to="/signup">
                                 Join Now
                             </NavLink>

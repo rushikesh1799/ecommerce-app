@@ -44,7 +44,7 @@
 }
 
 .slider {
-    width: 90%;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -82,6 +82,7 @@
 
 @media screen and (max-width: 768px) {
     .product-filter-aside {
-        width: 90%;
+        width: 95vw;
+        padding: 1rem;
     }
 }

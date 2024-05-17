@@ -96,7 +96,7 @@ const Checkout = () => {
         }
 
         const options = {
-            key: "rzp_test_I9ZAQpadkek2ay",
+            key: "rzp_test_p9dyLgw4nFPxlV",
             amount: totalCartValue * 100,
             currency: "INR",
             name: "FashionFusion",
